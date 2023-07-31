@@ -11,6 +11,11 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-to-138deg':
+          'linear-gradient(138deg, var(--tw-gradient-stops))',
+      },
+      boxShadow: {
+        base: '0 12px 24px 0px rgba(0, 0, 0, 0.10)',
       },
       colors: {
         'primary-100': '#FFF6E8',
@@ -49,7 +54,7 @@ module.exports = {
         'quartenary-700': '#A12226',
         'quartenary-800': '#6E171A',
         'quartenary-900': '#3B0C0E',
-        'text-base': '#5D6670'
+        'text-base': '#5D6670',
       },
       fontSize: {
         h1: '3rem',
@@ -60,7 +65,7 @@ module.exports = {
         p: '1rem',
         label: '0.875rem',
         'small-label': '0.75rem',
-      }
+      },
     },
   },
   plugins: [],

@@ -1,19 +1,22 @@
-import Image from 'next/image'
-import { Header } from './Components/Header'
-import { Hero } from './Components/Hero'
-import wavesImage from '@/app/assets/waves.png'
+import { Header } from './components/Header'
+import { Hero } from './components/Hero'
+
+import { AboutUs } from './components/AboutUs'
+import { TopCryptos } from './components/TopCryptos'
+import { NewsLetters } from './components/NewsLetters'
+import { Footer } from './components/Footer'
+import { Wave } from './components/Wave'
 
 export default function Home() {
   return (
     <div className="h-full bg-white overflow-x-hidden">
       <Header />
-
       <Hero />
-
-      {/* <div className="h-[224px] w-full">
-        <Image src={wavesImage} alt="" />
-      </div> */}
-      <div className="h-[4000px]"></div>
+      <Wave />
+      <AboutUs />
+      <TopCryptos />
+      <NewsLetters />
+      <Footer />
     </div>
   )
 }
