@@ -10,8 +10,6 @@
   </a>
 </p>
 
-<p align="center">CoinSycn | Online here: <a href="https://coinsynch-code-test.vercel.app/">Link</a></p>
-
 <br />
 <br />
 
