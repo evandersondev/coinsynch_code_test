@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="./src/assets/logo-coinsync.png" height="35px" alt="License MIT">
+  </a>
+</p>
 
-## Getting Started
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="./src/assets/screen.png"  alt="License MIT">
+  </a>
+</p>
 
-First, run the development server:
+<p align="center">CoinSycn | Online here: <a href="https://coinsynch-code-test.vercel.app/">Link</a></p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+<br />
+<br />
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Getting started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Run
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+> install dependencies with your package manager (npm, yarn or pnpm)
 
-## Learn More
+> run `npm run dev` or `yarn dev` or `pnpm run dev
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[//]: # "Add the features of your project here:"
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Some features used in the Project.
 
-## Deploy on Vercel
+- **<a href="https://nextjs.org/" target="_blank">NextsJS</a>**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **<a href="https://react-hook-form.com/" target="_blank">React Hook Forms</a>**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **<a href="https://tailwindcss.com/" target="\_blank">TailwindCSS</a>**
+
+- **<a href="https://www.radix-ui.com/" target="_blank">Radix UI</a>**
+
+- **<a href="https://www.framer.com/motion/" target="_blank">Framer Motion</a>**
+
+- **<a href="https://zod.dev/" target="_blank">Zod</a>**
+
+- **<a href="https://lucide.dev/" target="_blank">Lucide Icons</a>**
+
+- **<a href="https://norserium.github.io/react-indiana-drag-scroll/" target="_blank">React Indiana Drag Scroll</a>**
+
+- **<a href="https://recharts.org/en-US/" target="_blank">Recharts</a>**
+
+- **<a href="https://www.coinapi.io/" target="_blank">Coin API</a>**
+
+You can see more dependencies in `package.json` file.
+
+### - LICENSE
+
+This project is licensed under the MIT License - see the <a href="https://opensource.org/licenses/MIT" target="_blank">LICENSE</a> page for details.
