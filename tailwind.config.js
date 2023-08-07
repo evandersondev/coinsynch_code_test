@@ -16,6 +16,10 @@ module.exports = {
       },
       boxShadow: {
         base: '0 12px 24px 0px rgba(0, 0, 0, 0.10)',
+        'base-lg': '0px 8px 16px 0px rgba(0, 0, 0, 0.10)',
+      },
+      dropShadow: {
+        menu: '0px 0px 10px rgba(0, 0, 0, 0.05)',
       },
       colors: {
         'primary-100': '#FFF6E8',
