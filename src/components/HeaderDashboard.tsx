@@ -31,7 +31,7 @@ export function HeaderDashboard() {
   }, [])
 
   return (
-    <header className="h-16 w-full py-4 px-6 md:px-8 flex items-center justify-between">
+    <header className="h-16 w-full py-4 px-6 md:px-8 flex items-center justify-between bg-white  shadow-base-bottom">
       <div className="block lg:hidden">
         <button onClick={handleChange}>
           <Menu height={24} width={24} className="text-secondary-500" />

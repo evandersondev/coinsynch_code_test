@@ -10,6 +10,7 @@ import { Form } from './Form'
 import { FormProvider, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Loader2Icon } from 'lucide-react'
+import { toast } from 'react-toastify'
 
 const subscribeFormSchema = z.object({
   email: z.string().email(),
@@ -29,14 +30,14 @@ export function NewsLetters() {
   } = subscribeForm
 
   async function handleSubscribe({ email }: SubscribeFormData) {
-    const response = await axios.post('/axios/newsletter', { email })
+    await axios.post('/api/newsletter', { email })
 
-    console.log(response)
+    toast.success(`Email: ${email} are subscribe!`)
     control._reset()
   }
 
   return (
-    <div className="w-full md:h-[412px] flex items-center overflow-hidden relative bg-gradient-to-138deg from-primary-500 to-primary-700 lg:p-0 px-12 py-[56px]">
+    <div className="w-full md:h-[412px] flex items-center overflow-hidden relative bg-gradient-to-138deg from-primary-500 to-primary-700  px-12 py-[56px]">
       <main className="w-full max-w-[1440px] mx-auto flex md:flex-row flex-col lg:gap-0 md:gap-8 gap-10">
         <aside className="w-full md:w-[50%] text-white flex flex-col z-10">
           <h4 className="text-base md:text-[20px] lg:text-h4 text-primary-200 leading-6 md:leading-8 font-bold md:mb-1">

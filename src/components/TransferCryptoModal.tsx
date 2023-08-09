@@ -13,6 +13,7 @@ import { z } from 'zod'
 import { useWallet } from '@/hooks/useWallet'
 import { useCrypto } from '@/hooks/useCrypto'
 import { Crypto } from '@/app/api/coins/route'
+import { toast } from 'react-toastify'
 import Image from 'next/image'
 
 const transferFormSchema = z.object({
@@ -44,6 +45,7 @@ export function TransferCryptoModal({
   function handleTransferCrypto(data: TransferFormFormData) {
     removeBalance(crypto.priceInUSD * Number(data.quantity))
     removeQuatity(Number(data.quantity), crypto.name)
+    toast.success('Successful transfer.')
 
     control._reset()
     setShowModal(false)

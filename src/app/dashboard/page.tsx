@@ -32,16 +32,16 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="h-screen w-full max-w-[1440px] mx-auto flex flex-col ">
+    <div className="h-screen w-full mx-auto flex flex-col lg:bg-gray-100 bg-white">
       <HeaderDashboard />
 
-      <div className="flex flex-1">
+      <div className="flex flex-1 relative">
         <Sidebar />
 
         <main className="flex-1 py-14 px-6 md:px-[69px]">
           <CardDashboard />
 
-          <div className="h-[389px] w-full shadow-base-lg p-6 flex flex-col">
+          <div className="h-[389px] w-full shadow-base-lg p-6 flex flex-col bg-white rounded-lg">
             <div className="w-full flex items-center justify-between mb-12">
               <div className="flex items-center gap-4">
                 <Image src={walletImage} alt="" className="h-8 w-8" />
@@ -93,12 +93,12 @@ export default function Dashboard() {
         </main>
       </div>
 
-      <div className="hidden lg:block">
-        <Footer showLogo={false} />
+      <div className="hidden lg:block bg-transparent">
+        <Footer width="full" showLogo={false} />
       </div>
 
-      <div className="block lg:hidden">
-        <Footer showLogo />
+      <div className="block lg:hidden bg-transparent">
+        <Footer width="full" showLogo />
       </div>
     </div>
   )

@@ -19,6 +19,7 @@ import { z } from 'zod'
 import { FormProvider, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import Image from 'next/image'
+import { toast } from 'react-toastify'
 import { useCrypto } from '@/hooks/useCrypto'
 import { useWallet } from '@/hooks/useWallet'
 
@@ -65,6 +66,7 @@ export function AddCryptoModal() {
   async function handleAddWallet({ crypto, quantity }: WalletFormData) {
     addCrypto(crypto, Number(quantity))
     addBalance(crypto.priceInUSD * Number(quantity))
+    toast.success(`Crypto: ${crypto.name} add with success.`)
     control._reset()
     setShowModal(false)
   }

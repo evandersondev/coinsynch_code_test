@@ -16,6 +16,8 @@ module.exports = {
       },
       boxShadow: {
         base: '0 12px 24px 0px rgba(0, 0, 0, 0.10)',
+        'base-top': '0px -2px 8px 0px rgba(0, 0, 0, 0.10)',
+        'base-bottom': '0px 2px 8px 0px rgba(0, 0, 0, 0.15)',
         'base-lg': '0px 8px 16px 0px rgba(0, 0, 0, 0.10)',
       },
       dropShadow: {

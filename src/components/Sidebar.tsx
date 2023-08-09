@@ -12,11 +12,11 @@ export function Sidebar() {
   return (
     <div
       data-open={isOpen}
-      className="data-[open=true]:absolute data-[open=true]:top-[60px] data-[open=true]:bottom-[56px] data-[open=true]:left-0 data-[open=true]:right-0 data-[open=true]:z-50 bg-secondary-900/70 data-[open=true]:overflow-hidden"
+      className="min-h-full data-[open=true]:absolute data-[open=true]:top-0 data-[open=true]:bottom-0 data-[open=true]:left-0 data-[open=true]:right-0 data-[open=true]:z-50 bg-secondary-900/70 data-[open=true]:overflow-hidden"
     >
       <aside
         data-open={isOpen}
-        className="data-[open=true]:w-[240px] data-[open=true]:block hidden lg:w-[86px] h-full lg:flex flex-col lg:items-center space-y-8 border-t border-b border-t-secondary-300 border-b-secondary-300 pt-12 pl-6 lg:pl-0 overflow-hidden bg-white"
+        className="data-[open=true]:w-[240px] data-[open=true]:block hidden lg:w-[86px] min-h-full lg:flex flex-col lg:items-center space-y-8 border-t border-b border-t-secondary-300 border-b-secondary-300 pt-12 pl-6 lg:pl-0 overflow-hidden bg-white"
       >
         <SidebarItem image={walletImage} title="Lorem Ipsum" href="" />
         <SidebarItem image={atomImage} title="Lorem Ipsum" href="" />

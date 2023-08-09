@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { FormProvider, useForm } from 'react-hook-form'
+import { toast } from 'react-toastify'
 
 import { Form } from './Form'
 import { Button } from './Button'
@@ -42,6 +43,7 @@ export function SignUpModal() {
 
   function handleSignUpSubmit(data: SignUpFormData) {
     console.log(data)
+    toast.success(`${data.email} are signup!`)
 
     handleClose()
   }

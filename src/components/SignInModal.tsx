@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Mail, Lock, Eye, EyeOff, X } from 'lucide-react'
+import { Mail, Lock, Eye, EyeOff, X, Loader2Icon } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from './Button'
 import { NavLink } from './NavLink'
@@ -28,7 +28,10 @@ export function SignInModal() {
     resolver: zodResolver(signInFormSchema),
   })
 
-  const { handleSubmit } = signInForm
+  const {
+    handleSubmit,
+    formState: { isSubmitting },
+  } = signInForm
 
   function handleShowPassword() {
     setShowPassword((oldValue) => !oldValue)
@@ -38,6 +41,7 @@ export function SignInModal() {
     console.log(data)
 
     router.push('/dashboard')
+    !isSubmitting && handleClose()
   }
 
   return (
@@ -91,7 +95,19 @@ export function SignInModal() {
                 className="w-fit ml-auto text-right text-xs text-secondary-500 mt-[-20px] leading-[14px] hover:border-transparent"
               />
 
-              <Button.Root title="Sign in" type="submit" />
+              <Button.Root
+                data-active={isSubmitting}
+                title={isSubmitting ? '' : 'Sign in'}
+                type="submit"
+                className="data-[active=true]:cursor-not-allowed"
+              >
+                {isSubmitting && (
+                  <Button.Icon
+                    icon={Loader2Icon}
+                    className="h-6 animate-spin"
+                  />
+                )}
+              </Button.Root>
 
               <div className="text-center font-normal text-xs lg:text-sm text-text-base flex justify-center items-center gap-1">
                 Don’t have an account?
