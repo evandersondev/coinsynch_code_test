@@ -29,7 +29,7 @@ export function Header() {
           <Button.Root
             title="Sign in"
             onClick={() => handleShowModal(ModalType.signin)}
-            className="text-sm text-text-base w-fit max-h-min p-0 bg-transparent"
+            className="text-sm text-text-base w-fit max-h-min p-0 bg-transparent shadow-none"
           />
 
           <Button.Root

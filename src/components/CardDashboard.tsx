@@ -7,7 +7,7 @@ import { AreaChart, Area, ResponsiveContainer } from 'recharts'
 
 import { useWallet } from '@/hooks/useWallet'
 import { Variation } from '@/app/api/coins/variation/route'
-import { api } from '@/services/api'
+import axios from 'axios'
 import elephantImage from '@/assets/elephant.png'
 import lawImage from '@/assets/law.png'
 
@@ -22,7 +22,7 @@ export function CardDashboard() {
   })
 
   async function fetchVariationCrypto() {
-    const response = await api.get('/coins/variation')
+    const response = await axios.get('/api/coins/variation')
     const variation = response.data
 
     setDailyVariationCrypto(variation)

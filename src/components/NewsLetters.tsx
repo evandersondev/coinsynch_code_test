@@ -5,7 +5,7 @@ import { z } from 'zod'
 
 import waveSuscribeImage from '@/assets/waves-2.png'
 import { Button } from './Button'
-import { api } from '@/services/api'
+import axios from 'axios'
 import { Form } from './Form'
 import { FormProvider, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -29,7 +29,7 @@ export function NewsLetters() {
   } = subscribeForm
 
   async function handleSubscribe({ email }: SubscribeFormData) {
-    const response = await api.post('/newsletter', { email })
+    const response = await axios.post('/axios/newsletter', { email })
 
     console.log(response)
     control._reset()

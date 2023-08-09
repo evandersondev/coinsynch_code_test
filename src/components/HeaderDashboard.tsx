@@ -3,7 +3,7 @@
 import Image from 'next/image'
 
 import LogoImage from '@/assets/logo.png'
-import { api } from '@/services/api'
+import axios from 'axios'
 import { MenuBar } from './MenuBar'
 import { useEffect, useState } from 'react'
 import { Menu } from 'lucide-react'
@@ -22,7 +22,7 @@ export function HeaderDashboard() {
   })
 
   async function fetchUser() {
-    const response = await api.get('/user')
+    const response = await axios.get('/api/user')
     setUser(response.data)
   }
 

@@ -1,6 +1,6 @@
 'use client'
 import { Crypto } from '@/app/api/coins/route'
-import { api } from '@/services/api'
+import axios from 'axios'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
@@ -8,7 +8,7 @@ export function CoinCarousel() {
   const [cryptos, setCryptos] = useState<Crypto[]>([])
 
   async function getCoins() {
-    const response = await api.get<Crypto[]>('/coins')
+    const response = await axios.get<Crypto[]>('/api/coins')
     setCryptos(response.data)
   }
 

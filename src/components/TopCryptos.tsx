@@ -1,6 +1,6 @@
 'use client'
 
-import { api } from '@/services/api'
+import axios from 'axios'
 import { Button } from './Button'
 import { useEffect, useState } from 'react'
 import { Crypto } from '@/app/api/coins/route'
@@ -22,7 +22,7 @@ export function TopCryptos() {
   }
 
   async function getTopCryptos() {
-    const response = await api.get('/coins')
+    const response = await axios.get('/api/coins')
     setTopCryptos(response.data)
   }
 
