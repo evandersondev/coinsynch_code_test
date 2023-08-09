@@ -13,7 +13,7 @@ import * as Select from '@radix-ui/react-select'
 import { Form } from '@/components/Form'
 import { Button } from '@/components/Button'
 import { useEffect, useState } from 'react'
-import { api } from '@/services/api'
+import axios from 'axios'
 import { Crypto } from '@/app/api/coins/route'
 import { z } from 'zod'
 import { FormProvider, useForm } from 'react-hook-form'
@@ -53,7 +53,7 @@ export function AddCryptoModal() {
     walletForm
 
   async function getOptions() {
-    const response = await api<Crypto[]>('/coins')
+    const response = await axios.get<Crypto[]>('/api/coins')
 
     setOptions(response.data)
   }

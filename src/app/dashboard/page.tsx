@@ -32,7 +32,7 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="h-screen w-full max-w-[1440px] mx-auto flex flex-col bg-gray-100">
+    <div className="h-screen w-full max-w-[1440px] mx-auto flex flex-col ">
       <HeaderDashboard />
 
       <div className="flex flex-1">
